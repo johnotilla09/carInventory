@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\CarList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -34,21 +35,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// All Car Lists
 Route::get('/', function () {
     return view('carLists', [
-        'heading' => 'Latest Cars List',
-        'carList' => [
-            [
-                'id' => 1,
-                'title' => 'Honda City',
-                'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Ford Raptor',
-                'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ]
-        ]
+        'heading' => 'Latest Cars List'
+        // 'carList' => CarList::all()
 
+    ]);
+});
+
+// Single Car List
+Route::get('/cars/{id}', function($id) {
+    return view('carList', [
+        'carList' => CarList::find(($id))
     ]);
 });
