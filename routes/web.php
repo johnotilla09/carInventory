@@ -38,9 +38,8 @@ use Illuminate\Support\Facades\Route;
 // All Car Lists
 Route::get('/', function () {
     return view('carLists', [
-        'heading' => 'Latest Cars List'
-        // 'carList' => CarList::all()
-
+        'heading' => 'Latest Cars List',
+        'carList' => CarList::all()
     ]);
 });
 
