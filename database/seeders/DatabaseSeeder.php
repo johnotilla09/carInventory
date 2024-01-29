@@ -22,25 +22,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         CarList::create([
-            [
-                'title' => 'Honda City',
+            'title' => 'Honda City',
+                'tags' => 'Honda, Ford',
+                'company' => 'Honda',
+                'location' => 'United States of America',
+                'email' => 'test@example.com',
+                'website' => 'http://example.com',
                 'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ],
-            [
-                'title' => 'Ford Raptor',
-                'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ]
-        ]);
-
-        CarList::create([
-            [
-                'title' => 'Honda City',
-                'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ],
-            [
-                'title' => 'Ford Raptor',
-                'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus facilis molestias delectus quod rerum dolorem molestiae obcaecati voluptates facere ab fugit incidunt ipsum beatae voluptatem natus quo iste itaque dolore repellendus tempore, qui, laudantium, iusto fuga in! Deserunt fuga, eligendi nisi error autem voluptatibus porro laudantium rem ducimus temporibus delectus.'
-            ]
         ]);
     }
 }
