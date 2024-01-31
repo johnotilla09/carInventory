@@ -44,8 +44,10 @@ Route::get('/', function () {
 });
 
 // Single Car List
-Route::get('/car/{id}', function($id) {
+Route::get('/car/{carList}', function(CarList $carList) {
+    // Route Binding
+
     return view('carList', [
-        'carList' => CarList::find(($id))
+        'carList' => $carList
     ]);
 });
