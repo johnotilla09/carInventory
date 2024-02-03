@@ -51,3 +51,20 @@ Route::get('/car/{carList}', function(CarList $carList) {
         'carList' => $carList
     ]);
 });
+
+// // All Car Lists
+// Route::get('/', function () {
+//     return view('carLists', [
+//         'heading' => 'Latest Cars List',
+//         'carList' => CarList::all()
+//     ]);
+// });
+
+// // Single Car List
+// Route::get('/car/{carList}', function(CarList $carList) {
+//     // Route Binding
+
+//     return view('carList', [
+//         'carList' => $carList
+//     ]);
+// });
