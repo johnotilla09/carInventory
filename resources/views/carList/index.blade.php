@@ -1,8 +1,9 @@
-@extends('layout')
+{{-- @extends('layout') --}}
 
 {{-- <h1>{{$heading}}</h1> --}}
 
-@section('content')
+{{-- @section('content') --}}
+<x-layout>
 
 @include('partials._hero')
 @include('partials._search')
@@ -23,7 +24,7 @@
 
 </div>
 
-@endsection
+</x-layout>
 
 
     {{-- <h2><a href="/cars/{{$list['id']}}">{{$list['title']}}</a></h2>

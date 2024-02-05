@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarListController;
 use App\Models\CarList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,31 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Common Resourse Routes
+// index = Show of listing
+// show - Show single listing
+// create - Show form to create new listing
+// store - store new listing
+// edit - show form to edit existing listing
+// update - update listing
+// destroy - delete listing
+
+// All Car Lists
+Route::get('/', [CarListController::class, 'index']);
+
+// Single Car List
+Route::get('/car/{carList}', [CarListController::class, 'show']);
+
+
+
+
+
+
+
+
+
+
 
 // Route::get('/hello', function () {
 //     return response('<h1>Hello John C. Otilla</h1>', 200)
@@ -35,22 +61,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-// All Car Lists
-Route::get('/', function () {
-    return view('carLists', [
-        'heading' => 'Latest Cars List',
-        'carList' => CarList::all()
-    ]);
-});
-
-// Single Car List
-Route::get('/car/{carList}', function(CarList $carList) {
-    // Route Binding
-
-    return view('carList', [
-        'carList' => $carList
-    ]);
-});
 
 // // All Car Lists
 // Route::get('/', function () {
