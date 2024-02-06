@@ -51,7 +51,8 @@
     {{-- VIEW OUTPUT --}}
 
     <main>
-        {{$slot}} // ito  nama kapag nasa loob siya ng component
+        {{-- // ito  nama kapag nasa loob siya ng component --}}
+        {{$slot}}
     {{-- @yield('content') if nasa view folder siya --}} 
     </main>
 
