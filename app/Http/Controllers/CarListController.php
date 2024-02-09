@@ -10,11 +10,11 @@ class CarListController extends Controller
 {
     // show all car list
     public function index() {
-        // dd(request()); // This is a request helper
+        // dd(request('tag')); // This is a request helper
 
         return view('carList.index', [
             'heading' => 'Latest Cars List',
-            'carList' => CarList::all()
+            'carList' => CarList::latest()->filter(request(['tag']))->get()
         ]);
     }
 
